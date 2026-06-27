@@ -1,0 +1,68 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+button {
+  height: 97px;
+  /*width:50px; agar button me width define kr rhi thi toh isequal bs ek button ki jgh le rha tha*/
+  font-size: 28px;
+  border: none;
+  border-radius: 5px;
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.2s;
+}  
+.calculator {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 50px;              /* 👈 padding thoda kam */
+  background: black;
+  width: 25%;                 /* 👈 screen width ka 90% */
+  height: 65%;                /* 👈 screen height ka 90% */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;     /* 👈 display aur buttons vertically stack */
+  justify-content: space-between;
+}
+.buttons {
+  flex:4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+  row-gap: 0.5px;      /* 👈 sirf rows ke beech ka gap */
+  column-gap: 15px; 
+}
+#display {
+  width: 100%;
+  height: 15%;
+  background: white;
+  margin-bottom: 40px;
+  text-align:right;             /* text right aligned */
+  padding: 20px;
+  font-size: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow-x: auto;   /* 👈 horizontal scroll agar text zyada ho */
+  white-space: nowrap; /* 👈 text ek line me rahe */
+  line-height: 1;
+ 
+}
+button:hover {
+  background: #bbb;
+  font-size: 30px;
+}
+#ac, #de {
+  background: red;   /* red for clear/delete */
+  color: #fff;
+}
+#isequal {
+  background: #4CAF50;   /* green for equal */
+  color: #fff;
+  grid-row: span 2;
+  grid-column: span 2;
+
+}
